@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define your CSS variables */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 3.9%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 221 83% 53%;
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
+  --accent: 217 91% 60%;
+  --accent-foreground: 0 0% 98%;
+  --radius: 0.75rem;
+  --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+  --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.4);
+  --shadow-primary: 0 10px 30px -10px hsl(221 83% 53% / 0.3);
+}
+
+/* Apply default background and text colors */
+body {
+  @apply bg-background text-foreground font-sans;
+  cursor: none; /* Hide the default system cursor */
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
